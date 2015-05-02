@@ -16,6 +16,30 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.logo {
+  height: 256px;
+  width: 256px;
+  display: inline-block;
+}
+
+.logo-footer {
+  height: 128px;
+  width: 128px;
+  display: inline-block;
+}
+
+.bg-primary {
+  background-color: #AEA69F;
+}
+
+.text-primary {
+  color: #A96767;
+}
+
+a {
+  color: #A96767;
+}
+
 .text-vertical-center {
     display: table-cell;
     text-align: center;
@@ -25,8 +49,13 @@ body {
 .text-vertical-center h1 {
     margin: 0;
     padding: 0;
-    font-size: 4.5em;
-    font-weight: 700;
+    font-size: 15em;
+    font-weight: 900;
+}
+
+.text-vertical-center h3 {
+    font-size: 2em;
+    font-weight: 575;
 }
 
 /* Custom Button Styles */
@@ -155,7 +184,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(../img/background.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -166,6 +195,7 @@ hr.small {
 
 .about {
     padding: 50px 0;
+    background-color: rgb(252, 248, 243);
 }
 
 /* Services */
@@ -185,7 +215,7 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    background: url(../img/julia.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -223,7 +253,7 @@ hr.small {
 /* Map */
 
 .map {
-    height: 500px;
+    height: 300px;
 }
 
 @media(max-width:768px) {

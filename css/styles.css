@@ -23,11 +23,11 @@ body {
 }
 
 .bg-primary {
-  background-color: #AEA69F;
+  background-color: #3F3F3F;
 }
 
 .text-primary, a {
-  color: #646464;
+  color: #3F3F3F;
 }
 
 .text-vertical-center {
@@ -185,13 +185,21 @@ hr.small {
 
 .about {
     padding: 50px 0;
-    background-color: rgb(252, 248, 243);
+    background-color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    border-bottom-width: inherit;
 }
 
 /* Services */
 
 .services {
     padding: 50px 0;
+    border-style: solid;
+    border-width: thick;
+    border-color: white;
+    border-top-width: inherit;
 }
 
 .service-item {
@@ -216,6 +224,9 @@ hr.small {
 
 .portfolio {
     padding: 50px 0;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
 }
 
 .portfolio-item {
@@ -262,6 +273,7 @@ footer {
   height: 300px;
   width: 300px;
   display: inline-block;
+  margin-bottom: 50px;
 }
 
 /* MEDIA */
@@ -283,13 +295,13 @@ footer {
     font-size: 12em;
   }
   .logo {
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     display: inline-block;
   }
   .logo-footer {
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 350px;
   }
 }
 

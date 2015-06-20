@@ -24,24 +24,6 @@ body {
   color: #3F3F3F;
 }
 
-.text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 9em;
-    font-weight: 900;
-}
-
-.text-vertical-center h3 {
-    font-size: 2em;
-    font-weight: 575;
-}
-
 /* Custom Button Styles */
 
 .btn-dark {
@@ -74,6 +56,164 @@ body {
 
 hr.small {
     max-width: 100px;
+}
+
+.logo {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+}
+
+.title {
+  font-size: 10em;
+}
+
+.subtitle {
+  margin: auto;
+  font-family: inherit;
+  font-size: large;
+  font-weight: 200;
+}
+
+/* Header */
+
+.header {
+    padding: 50px 0;
+    background-color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    border-bottom-width: inherit;
+    text-align: center;
+}
+
+/* About */
+
+.about {
+    padding: 50px 0;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    border-bottom-width: inherit;
+}
+
+/* Services */
+
+.services {
+    padding: 50px 0;
+    border-style: solid;
+    border-width: thick;
+    border-color: white;
+    border-top-width: inherit;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+/* Callout */
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../img/julia.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: 50px 0;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+.img-portfolio:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+
+footer {
+    padding: 100px 0;
+}
+
+.footer-container {
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    border-top-width: inherit;
+}
+
+/* MEDIA */
+
+@media (min-width: 200px) {
+  .title {
+    font-size: 2em;
+  }
+  .subtitle {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 400px) {
+  .title {
+    font-size: 3em;
+  }
+  .subtitle {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 5em;
+  }
+  .subtitle {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 900px) {
+  .title {
+    font-size: 7em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .title {
+    font-size: 8em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .title {
+    font-size: 8em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 8em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .title {
+    font-size: 10em;
+  }
 }
 
 /* Side Menu */
@@ -159,190 +299,4 @@ hr.small {
 
 .toggle {
     margin: 5px 5px 0 0;
-}
-
-@font-face {
-  font-family: NexaLight;
-  src: url("fonts\nexalight.otf") format("opentype");
-}
-
-@font-face {
-  font-family: NexaBold;
-  src: url("fonts\nexabold.otf") format("opentype");
-}
-
-.logo {
-  height: 300px;
-  width: 300px;
-  display: inline-block;
-}
-
-.title {
-  font-size: 10em;
-}
-
-.subtitle {
-  margin: auto;
-  font-family: inherit;
-  font-size: large;
-}
-
-/* Header */
-
-.header {
-    padding: 50px 0;
-    background-color: white;
-    border-style: solid;
-    border-width: thick;
-    border-color: black;
-    border-bottom-width: inherit;
-    text-align: center;
-}
-
-/* About */
-
-.about {
-    padding: 50px 0;
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-width: thick;
-    border-color: black;
-    border-bottom-width: inherit;
-}
-
-/* Services */
-
-.services {
-    padding: 50px 0;
-    border-style: solid;
-    border-width: thick;
-    border-color: white;
-    border-top-width: inherit;
-}
-
-.service-item {
-    margin-bottom: 30px;
-}
-
-/* Callout */
-
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(../img/julia.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-/* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
-    border-style: solid;
-    border-width: thick;
-    border-color: black;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-.img-portfolio:hover {
-    opacity: 0.8;
-}
-
-/* Call to Action */
-
-.call-to-action {
-    padding: 50px 0;
-}
-
-.call-to-action .btn {
-    margin: 10px;
-}
-
-/* Map */
-
-.map {
-    height: 250px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 30%;
-    }
-}
-
-/* Footer */
-
-footer {
-    padding: 100px 0;
-}
-
-/* MEDIA */
-
-@media (min-width: 200px) {
-  .title {
-    font-size: 2em;
-  }
-  .subtitle {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 400px) {
-  .title {
-    font-size: 3em;
-  }
-  .subtitle {
-    font-size: 1.5em;
-  }
-}
-
-@media (min-width: 600px) {
-  .title {
-    font-size: 5em;
-  }
-  .subtitle {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: 900px) {
-  .title {
-    font-size: 7em;
-  }
-}
-
-@media (min-width: 1000px) {
-  .title {
-    font-size: 8em;
-  }
-}
-
-@media (min-width: 1100px) {
-  .title {
-    font-size: 8em;
-  }
-}
-
-@media (min-width: 1200px) {
-  .title {
-    font-size: 8em;
-  }
-}
-
-@media (min-width: 1300px) {
-  .title {
-    font-size: 10em;
-  }
 }

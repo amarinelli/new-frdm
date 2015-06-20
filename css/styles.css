@@ -58,6 +58,18 @@ hr.small {
     max-width: 100px;
 }
 
+/* Header */
+
+.header {
+    padding: 50px 0;
+    background-color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    border-bottom-width: inherit;
+    text-align: center;
+}
+
 .logo {
   height: 300px;
   width: 300px;
@@ -73,18 +85,6 @@ hr.small {
   font-family: inherit;
   font-size: large;
   font-weight: 200;
-}
-
-/* Header */
-
-.header {
-    padding: 50px 0;
-    background-color: white;
-    border-style: solid;
-    border-width: thick;
-    border-color: black;
-    border-bottom-width: inherit;
-    text-align: center;
 }
 
 /* About */
@@ -137,7 +137,8 @@ hr.small {
 }
 
 .img-portfolio {
-    margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .img-portfolio:hover {

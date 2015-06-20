@@ -16,12 +16,6 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.logo {
-  height: 256px;
-  width: 256px;
-  display: inline-block;
-}
-
 .bg-primary {
   background-color: #3F3F3F;
 }
@@ -167,25 +161,50 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
+@font-face {
+  font-family: NexaLight;
+  src: url("fonts\nexalight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NexaBold;
+  src: url("fonts\nexabold.otf") format("opentype");
+}
+
+.logo {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+}
+
+.title {
+  font-size: 8em;
+}
+
+.subtitle {
+  margin: auto;
+  font-family: inherit;
+  font-size: large;
+}
+
 /* Header */
 
 .header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(../img/background.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    padding: 50px 0;
+    background-color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    border-bottom-width: inherit;
+    text-align: center;
 }
 
 /* About */
 
 .about {
     padding: 50px 0;
-    background-color: white;
+    background-color: black;
+    color: white;
     border-style: solid;
     border-width: thick;
     border-color: black;
@@ -269,15 +288,7 @@ footer {
     padding: 100px 0;
 }
 
-.logo-footer {
-  height: 300px;
-  width: 300px;
-  display: inline-block;
-  margin-bottom: 50px;
-}
-
 /* MEDIA */
-
 @media (min-width: 800px) {
   .text-vertical-center h1 {
     font-size: 10em;
@@ -293,15 +304,6 @@ footer {
 @media (min-width: 1000px) {
   .text-vertical-center h1 {
     font-size: 12em;
-  }
-  .logo {
-    height: 300px;
-    width: 300px;
-    display: inline-block;
-  }
-  .logo-footer {
-    height: 350px;
-    width: 350px;
   }
 }
 

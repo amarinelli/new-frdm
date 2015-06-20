@@ -177,6 +177,15 @@ footer {
   }
 }
 
+@media (min-width: 500px) {
+  .title {
+    font-size: 3.5em;
+  }
+  .subtitle {
+    font-size: 1.5em;
+  }
+}
+
 @media (min-width: 600px) {
   .title {
     font-size: 5em;

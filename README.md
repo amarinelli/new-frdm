@@ -1,3 +1,5 @@
-# NEW-FRDM
+# NEW FRDM
 
-![logo](images/logo.jpg)
+### Launching 2016
+
+![logo](img/card-front.jpg)

@@ -40,10 +40,10 @@
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-          <a href="#top"  onclick = $("#menu-close").click(); >New FRDM</a>
+          <a href="#top"  onclick = $("#menu-close").click(); >NEW FRDM</a>
         </li>
         <li>
-          <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+          <a href="#header" onclick = $("#menu-close").click(); >Home</a>
         </li>
         <li>
           <a href="#about" onclick = $("#menu-close").click(); >About</a>
@@ -82,25 +82,33 @@
 
     <!-- Products -->
     <section id="products" class="portfolio">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <div class="row">
-              <div class="col-md-4">
-                <div class="portfolio-item">
-                  <img class="img-portfolio img-responsive" src="img/julia-underwear-1.png" alt="Underwear 1">
-                </div>
-              </div>
+
               <div class="col-md-4">
                 <div class="portfolio-item">
                   <img class="img-portfolio img-responsive" src="img/julia-underwear-2.png" alt="Underwear 2">
                 </div>
               </div>
+
+              <div id="image-middle" class="col-md-4">
+                <div class="portfolio-item">
+                  <div class="image-text">
+                    <h4>WELCOME TO THE NEIGHBOURHOOD</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                  </div>
+                  <img class="img-portfolio img-responsive" src="img/julia-underwear-1.png" alt="Underwear 1">
+                </div>
+              </div>
+
               <div class="col-md-4">
                 <div class="portfolio-item">
                   <img class="img-portfolio img-responsive" src="img/julia-underwear-3.png" alt="Underwear 3">
                 </div>
               </div>
+
             </div>
             <!-- /.row (nested) -->
           </div>
@@ -116,6 +124,11 @@
       <div id="contact-info" class="container">
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
+            <p class="footer-note" >JOIN THE REVOLUTION</p>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#emailModal">
+              Email Signup
+            </button>
+            <hr class="small">
             <ul class="list-inline">
               <li>
                 <a href="https://twitter.com/new_frdm" target="_blank"><i class="fa fa-twitter fa-fw fa-5x"></i></a>
@@ -135,42 +148,45 @@
       </div>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Email Signup</h4>
+          </div>
+          <form autocomplete="on">
+          <div class="modal-body">
+            <div class="input-group">
+            <span class="input-group-addon" id="envelope"><i class="fa fa-envelope-o"></i></span>
+            <input id="emailInput" type="email" autocomplete="on" class="form-control" autofocus placeholder="Email" aria-describedby="envelope">
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button id="submitEmail" type="button" class="btn btn-primary">Submit</button>
+            <div id="emailAlert" class="alert alert-danger invalid-email" role="alert">Please enter a valid email!</div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-      // Closes the sidebar menu
-      $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-      });
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
 
-      // Opens the sidebar menu
-      $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-      });
+    <!-- Toastr -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-      // Scrolls to the selected menu item on the page
-      $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+    <!-- Toastr -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-          }
-        });
-      });
-    </script>
 </body>
 </html>

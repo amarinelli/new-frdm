@@ -29,15 +29,39 @@ $(function() {
   });
 });
 
-// Middle image text caption
+// Middle image text caption on HOVER
 $('#image-middle .portfolio-item').hover(
    function() {
-  	 $(this).find('.image-text').fadeIn(250);
+  	 $(this).find('.image-text-extra').fadeIn(350);
+     $(this).find('.image-text').fadeOut(350);
    },
    function() {
-  	 $(this).find('.image-text').fadeOut(250);
+  	 $(this).find('.image-text-extra').fadeOut(350);
+     $(this).find('.image-text').fadeIn(350);
    }
 );
+
+// Mobile click for text instead of hover
+$('.image-text').click(
+  function() {
+    $('.image-text-extra').fadeIn(250);
+    $('.image-text').fadeOut(250);
+  });
+
+$('.image-text-extra').click(
+  function() {
+  $('.image-text-extra').fadeOut(250);
+  $('.image-text').fadeIn(250);
+})
+
+// Element visible when scroll into view
+// $(window).scroll(function() {
+//   if ($('#image-middle .portfolio-item').visible()) {
+//     $('#image-middle .portfolio-item').find('.image-text').fadeIn(250);
+//   } else {
+//     $('#image-middle .portfolio-item').find('.image-text').fadeOut(1000);
+//   }
+// });
 
 $( document ).ready(function() {
   // toastr options
@@ -48,37 +72,34 @@ $( document ).ready(function() {
   }
 });
 
+// Focus input when modal appears
+$('#emailModal').on('shown.bs.modal', function () {
+  $('#emailInput').focus()
+})
 
 // Email signup modal
 $('#submitEmail').click(function(){
 
   $('#emailAlert').hide();
-
   var email = $('#emailInput').val();
 
   // Valid Email
   if (validateEmail(email)) {
     $('#emailModal').modal('hide');
-
-    // Display info toast
-    $('#emailModal').on('hidden.bs.modal', function(e) {
-      toastr.info('Email successfully submitted!')
-    })
-  }
-
-  // Invalid Email
-  else {
+    toastr.info('Email successfully submitted!');
+    $('#emailInput').val("");    
+  } else {
+    // Invalid Email
     $('#emailAlert').fadeIn(250);
   }
 });
 
-// When text input occurs
+// When text input occurs hide alert (if any)
 $('#emailInput').on('input', function() {
-  console.log('change');
   $('#emailAlert').fadeOut(100);
 });
 
-// When modal is closed
+// // When modal is closed
 $('#emailModal').on('hidden.bs.modal', function(e) {
   $('#emailInput').val("");
   $('#emailAlert').hide();

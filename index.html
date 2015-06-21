@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -22,7 +22,7 @@
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -99,6 +99,10 @@
                     <h4>WELCOME TO THE NEIGHBOURHOOD</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                   </div>
+                  <div class="image-text-extra">
+                    <h4>A NOTE FROM JULIA</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                  </div>
                   <img class="img-portfolio img-responsive" src="img/julia-underwear-1.png" alt="Underwear 1">
                 </div>
               </div>
@@ -125,7 +129,7 @@
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <p class="footer-note" >JOIN THE REVOLUTION</p>
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#emailModal">
+            <button id="emailSignup" type="button" class="btn btn-default" data-toggle="modal" data-target="#emailModal">
               Email Signup
             </button>
             <hr class="small">
@@ -134,7 +138,7 @@
                 <a href="https://twitter.com/new_frdm" target="_blank"><i class="fa fa-twitter fa-fw fa-5x"></i></a>
               </li>
               <li>
-                <a href="https://www.facebook.com/newfrdm" target="_blank"><i class="fa fa-facebook fa-fw fa-5x"></i></a>
+                <a href="facebook://www.facebook.com/newfrdm" target="_blank"><i class="fa fa-facebook fa-fw fa-5x"></i></a>
               </li>
               <li>
                 <a href="https://instagram.com/new_frdm/" target="_blank"><i class="fa fa-instagram fa-fw fa-5x"></i></a>
@@ -158,13 +162,12 @@
           </div>
           <form autocomplete="on">
           <div class="modal-body">
-            <div class="input-group">
-            <span class="input-group-addon" id="envelope"><i class="fa fa-envelope-o"></i></span>
-            <input id="emailInput" type="email" autocomplete="on" class="form-control" autofocus placeholder="Email" aria-describedby="envelope">
-          </div>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="envelope"><i class="fa fa-envelope-o"></i></span>
+              <input id="emailInput" type="email" autocomplete="on" class="form-control" placeholder="Email" aria-describedby="envelope">
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button id="submitEmail" type="button" class="btn btn-primary">Submit</button>
             <div id="emailAlert" class="alert alert-danger invalid-email" role="alert">Please enter a valid email!</div>
           </div>
@@ -174,7 +177,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -182,10 +185,12 @@
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
 
+    <!-- jQuery Visible -->
+    <script src="js/jquery.visible.min.js"></script>
+
     <!-- Toastr -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-    <!-- Toastr -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
 </body>

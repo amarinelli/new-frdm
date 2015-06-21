@@ -63,50 +63,6 @@ $('.image-text-extra').click(
 //   }
 // });
 
-$( document ).ready(function() {
-  // toastr options
-  toastr.options = {
-    "positionClass": "toast-bottom-center",
-    "preventDuplicates": true,
-    "timeOut": "2000"
-  }
-});
-
-// Focus input when modal appears
-$('#emailModal').on('shown.bs.modal', function () {
-  $('#emailInput').focus()
+$('#mc-embedded-subscribe').click(function() {
+  $('#emailModal').modal('hide');
 })
-
-// Email signup modal
-$('#submitEmail').click(function(){
-
-  $('#emailAlert').hide();
-  var email = $('#emailInput').val();
-
-  // Valid Email
-  if (validateEmail(email)) {
-    $('#emailModal').modal('hide');
-    toastr.info('Email successfully submitted!');
-    $('#emailInput').val("");    
-  } else {
-    // Invalid Email
-    $('#emailAlert').fadeIn(250);
-  }
-});
-
-// When text input occurs hide alert (if any)
-$('#emailInput').on('input', function() {
-  $('#emailAlert').fadeOut(100);
-});
-
-// // When modal is closed
-$('#emailModal').on('hidden.bs.modal', function(e) {
-  $('#emailInput').val("");
-  $('#emailAlert').hide();
-})
-
-// Validate email
-function validateEmail(email) {
-  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-  return re.test(email);
-};

@@ -63,6 +63,27 @@ $('.image-text-extra').click(
 //   }
 // });
 
+// Hide modal when user subscribes (opens new tab)
 $('#mc-embedded-subscribe').click(function() {
   $('#emailModal').modal('hide');
 })
+
+// Textfill for welcome message
+$(function() {
+    $('#welcome-text').textfill({
+      maxFontPixels: -1
+    });
+});
+
+$( window ).resize(function() {
+  $('#welcome-text').textfill({
+    maxFontPixels: -1
+  });
+});
+
+
+$(function() {
+    $('#launching-text').textfill({
+      maxFontPixels: -1
+    });
+});

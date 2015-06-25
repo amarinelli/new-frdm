@@ -168,6 +168,10 @@ hr.small {
   color: #fff !important;
 }
 
+.image-text-extra-content {
+  padding: 20px;
+}
+
 .img-portfolio {
   padding-left: 25px;
   padding-right: 25px;

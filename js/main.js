@@ -87,3 +87,21 @@ $(function() {
       maxFontPixels: -1
     });
 });
+
+$( window ).resize(function() {
+  $('#launching-text').textfill({
+    maxFontPixels: -1
+  });
+});
+
+$(function() {
+    $('#poem').textfill({
+      maxFontPixels: -1
+    });
+});
+
+$( window ).resize(function() {
+  $('#poem').textfill({
+    maxFontPixels: -1
+  });
+});

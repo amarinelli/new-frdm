@@ -83,9 +83,9 @@ $( window ).resize(function() {
 
 
 $(function() {
-    $('#launching-text').textfill({
-      maxFontPixels: -1
-    });
+  $('#launching-text').textfill({
+    maxFontPixels: -1
+  });
 });
 
 $( window ).resize(function() {
@@ -102,6 +102,12 @@ $(function() {
 
 $( window ).resize(function() {
   $('#poem').textfill({
+    maxFontPixels: -1
+  });
+});
+
+$( document ).ready(function() {
+  $('#welcome-text').textfill({
     maxFontPixels: -1
   });
 });

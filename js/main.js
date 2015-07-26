@@ -95,9 +95,9 @@ $( window ).resize(function() {
 });
 
 $(function() {
-    $('#poem').textfill({
-      maxFontPixels: -1
-    });
+  $('#poem').textfill({
+    maxFontPixels: -1
+  });
 });
 
 $( window ).resize(function() {

@@ -85,6 +85,12 @@ hr.small {
   font-weight: 200;
 }
 
+.github-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
 /* About */
 
 .about {
@@ -374,6 +380,7 @@ footer {
     position: fixed;
     top: 0;
     right: 0;
+    border-radius: 0px 0px 0px 5px
 }
 
 #sidebar-wrapper.active {
